@@ -1,0 +1,14 @@
+[
+  {
+    "name": " KYLIAN MBAPPE",
+    "image": "/players/mbappe/person.png",
+    "club": "PARIS SAINT GERMAIN",
+    "position": "STRIKER" ,
+    "color": "#0E2164",
+    "gallery": [
+      "/players/mbappe/gallery_1.png",
+      "/players/mbappe/gallery_2.png",
+      "/players/mbappe/gallery_3.png"
+    ]
+  }
+]
