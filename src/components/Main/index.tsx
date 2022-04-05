@@ -1,7 +1,10 @@
 import styles from './styles.module.scss'
 
-export const Main = () => (
+import { Player } from 'types/player'
+
+export const Main = (player: Player) => (
   <main className={styles.container}>
-    <div>Main</div>
+    <h2>{player.firstName}</h2>
+    <h1>{player.lastName}</h1>
   </main>
 )
