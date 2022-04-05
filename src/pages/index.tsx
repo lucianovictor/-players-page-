@@ -6,6 +6,7 @@ import styles from 'styles/home.module.scss'
 
 import players from 'data/players.json'
 import { useState } from 'react'
+import { Footer } from 'components/Footer'
 
 const HomePage = () => {
   const [player, setPlayers] = useState(players[0])
@@ -15,8 +16,9 @@ const HomePage = () => {
       <Head>
         <title>NextJS Boilerplate</title>
       </Head>
-      <Header playerName={player.name} />
-      {/* <Main /> */}
+      <Header lastName={player.lastName} />
+      <Main {...player} />
+      <Footer {...player} />
     </div>
   )
 }
