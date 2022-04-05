@@ -3,22 +3,21 @@ import { Main } from 'components/Main'
 import Head from 'next/head'
 
 import styles from 'styles/home.module.scss'
-
-import players from 'data/players.json'
-import { useState } from 'react'
+import { Background } from 'components/background'
 import { Footer } from 'components/Footer'
+import { usePlayer } from 'hook/usePlayer'
 
 const HomePage = () => {
-  const [player, setPlayers] = useState(players[0])
-
+  const { player } = usePlayer()
   return (
     <div className={styles.container} style={{ background: player.color }}>
       <Head>
-        <title>NextJS Boilerplate</title>
+        <title>{player.firstName + ' ' + player.lastName}</title>
       </Head>
-      <Header lastName={player.lastName} />
-      <Main {...player} />
-      <Footer {...player} />
+      <Background />
+      <Header />
+      <Main />
+      <Footer />
     </div>
   )
 }
