@@ -1,19 +1,17 @@
 import styles from './styles.module.scss'
 
 interface HeaderProps {
-  playerName: string
+  lastName: string
 }
 
-export const Header = ({ playerName }: HeaderProps) => {
-  const handleLastNameAndFirtsCharAt = () => {
-    const lastName = playerName.split(' ')[1]
-
+export const Header = ({ lastName }: HeaderProps) => {
+  const handleFirtsCharAt = () => {
     return lastName.charAt(0)
   }
 
   return (
     <header className={styles.container}>
-      <strong>{handleLastNameAndFirtsCharAt()}</strong>
+      <strong>{handleFirtsCharAt()}</strong>
       <button type="button">
         <span />
         <span />
