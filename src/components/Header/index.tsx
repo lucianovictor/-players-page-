@@ -1,18 +1,17 @@
+import { usePlayer } from 'hook/usePlayer'
 import styles from './styles.module.scss'
 
-interface HeaderProps {
-  lastName: string
-}
+export const Header = () => {
+  const { changePlayer, player } = usePlayer()
 
-export const Header = ({ lastName }: HeaderProps) => {
-  const handleFirtsCharAt = () => {
-    return lastName.charAt(0)
+  const handleFirstCharAt = () => {
+    return player.lastName.charAt(0)
   }
 
   return (
     <header className={styles.container}>
-      <strong>{handleFirtsCharAt()}</strong>
-      <button type="button">
+      <strong>{handleFirstCharAt()}</strong>
+      <button type="button" onClick={changePlayer}>
         <span />
         <span />
       </button>
